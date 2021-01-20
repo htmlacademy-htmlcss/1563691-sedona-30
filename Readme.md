@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Елена Дымова](https://up.htmlacademy.ru/htmlcss/30/user/1563691).
-* Наставник: `Павел Бубликов (https://htmlacademy.ru/profile/pbuba)`.
+* Наставник: [Павел Бубликов](https://htmlacademy.ru/profile/pbuba).
 
 ---
 
