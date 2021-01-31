@@ -20,6 +20,7 @@
     --field-selected: #E5E5E5; /*поле вода выбрано*/
     --click-logo: #BDBBBC; /*лого академии нажатие*/
     --basic-white: #FFFFFF;
+    --black-opacity: rgba(0, 0, 0, 0.3);
 }
 
 
@@ -33,9 +34,7 @@ body {
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
-    color: var(--basic-black);
     text-transform: uppercase;
-    background-color: var(--basic-white);
 }
 
 a {
@@ -72,9 +71,8 @@ img {
 }
 
 .site-navigation a:active {
-    color: var(--basic-black);
-    opacity: 0.3;
-}
+    color: var(--black-opacity);
+s}
 
 
 /* Main display */
@@ -83,11 +81,15 @@ img {
     font-size: 21px;
     font-weight: 700;
     line-height: 26px;
+    text-align: center;
 }
 
 .container p {
     line-height: 26px;
+    color: var(--basic-light);
+    text-align: center;
 }
+
 
 /* Features */
 
@@ -105,7 +107,25 @@ img {
     line-height: 21px;
 }
 
-.feature-item-background {
+.feature-item p {
+    color: var(--basic-light);
+}
+
+.features-list li:nth-child(1) p,
+.features-list li:nth-child(5) p,
+.features-list li:nth-child(1) h3,
+.features-list li:nth-child(5) h3 {
+    color: var(--basic-white);
+}
+
+.features-list li:nth-child(1),
+.features-list li:nth-child(5) {
+    background-color: var(--accent-light);
+}
+
+.features-list li:nth-child(6),
+.features-list li:nth-child(7),
+.features-list li:nth-child(8) {
     background-color: var(--index-grey);
 }
 
@@ -120,6 +140,10 @@ img {
     font-size: 30px;
     line-height: 24px;
     font-weight: 700;
+}
+
+.search p {
+    color: var(--basic-light);
 }
 
 .button {
