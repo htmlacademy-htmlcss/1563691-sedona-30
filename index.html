@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
     <title>Седона</title>
@@ -7,15 +7,18 @@
     <link rel="icon" href="img/favicon-32.svg" type="image/svg+xml" sizes="32x32">
     <link rel="icon" href="img/favicon-16.svg" type="image/svg+xml" sizes="16x16">
     <link rel="icon" href="img/favicon-152.png" type="apple-touch-icon" sizes="152x152">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
+    <link href="normalize.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
   </head>
 
-  <body>
-    <header>
-      <nav>
-        <a>
+  <body class="page-body">
+    <header class="main-header">
+      <nav class="main-navigation">
+        <a class="main-header-logo">
           <img src="img/logo.svg" width="138" height="70" alt="Логотип Седона">
         </a>
-        <ul>
+        <ul class="site-navigation">
           <li><a href="blank.html">Информация</a></li>
           <li><a href="blank.html">Фото и видео</a></li>
           <li><a href="blank.html">Карта штата</a></li>
@@ -24,47 +27,48 @@
       </nav>
     </header>
 
-    <main>
+    <main class="container">
       <h1>Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</h1>
       <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       <img src="img/welcome.svg" width="457" height="350" alt="Добро пожаловать в великолепную Седону">
-      <section>
+      <section class="features">
         <h2>Преимущества</h2>
-        <ul>
-          <li>
+        <ul class="features-list">
+          <li class="feature-item">
             <h3>Настоящий городок</h3>
             <p>&mdash; №1 &mdash;</p>
             <p>Седона &mdash; не аттракцион для туристов, там течёт своя жизнь</p>
+            <img src="img/sedona-city.jpg" width="800" height="256" alt="Фото городка Седона">
           </li>
-          <li>
+          <li class="feature-item">
             <h3>Жилье</h3>
             <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </li>
-          <li>
+          <li class="feature-item">
             <h3>Еда</h3>
             <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
           </li>
-          <li>
+          <li class="feature-item">
             <h3>Сувениры</h3>
             <p>Не только китайского, но и местного производства!</p>
           </li>
-          <li>
+          <li class="feature-item">
             <h3>Там есть Мост дьявола</h3>
             <p>&mdash; №2 &mdash;</p>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
             <img src="img/bridge.jpg" width="800" height="256" alt="Мост Дьявола в Седоне">
           </li>
-          <li>
+          <li class="feature-item feature-item-background">
             <h3>Небольшая площадь</h3>
             <p>&mdash; №3 &mdash;</p>
             <p>Все достопримечательности находятся очень близко</p>
           </li>
-          <li>
+          <li class="feature-item feature-item-background">
             <h3>Красивая дорога</h3>
             <p>&mdash; №4 &mdash;</p>
             <p>Ехать в седону из лас-вегаса совсем не скучно!</p>
           </li>
-          <li>
+          <li class="feature-item feature-item-background">
             <h3>Мало туристов</h3>
             <p>&mdash; №5 &mdash;</p>
             <p>Большинство едет в гранд каньон и толпится там</p>
@@ -72,38 +76,38 @@
         </ul>
       </section>
 
-      <section>
+      <section class="search">
         <h2>Поиск гостиницы в седоне</h2>
-        <p>Заинтересовались?</p>
+        <p class="bold">Заинтересовались?</p>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <button type="button">Поиск гостиницы в седоне</button>
+        <button class="button" type="button">Поиск гостиницы в седоне</button>
       </section>
 
-      <img src="img/index/map.png" width="1200" height="594" alt="Страна Соединённые Штаты Америки, Штат Аризона, Графство Явапай">
+      <img src="img/map.png" width="1200" height="594" alt="Страна Соединённые Штаты Америки, Штат Аризона, Графство Явапай">
     </main>
 
-    <footer>
-      <section>
+    <footer class="main-footer">
+      <section class="main-footer-contacts">
         <h2>Контакты</h2>
         <p>&num;visitSEDONA</p>
-        <p>ТЕЛ: <a href="tel:+74956660166"></a>+7(495) 666-01-66 </p>
+        <p>ТЕЛ: <a class="main-footer-phone" href="tel:+74956660166"></a>+7(495) 666-01-66 </p>
       </section>
-      <section>
+      <section class="main-footer-social">
         <h2>Социальные сети</h2>
         <ul>
           <li>
-            <a href="#">Твиттер</a>
+            <a class="social-button" href="#">Твиттер</a>
           </li>
           <li>
-            <a href="#">Фейсбук</a>
+            <a class="social-button" href="#">Фейсбук</a>
           </li>
           <li>
-            <a href="#">Ютуб</a>
+            <a class="social-button" href="#">Ютуб</a>
           </li>
         </ul>
       </section>
       <p>Website by</p>
-      <a href="https://htmlacademy.ru/intensive/htmlcss">
+      <a class="main-footer-logo" href="https://htmlacademy.ru/intensive/htmlcss">
         <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML Academy">
       </a>
     </footer>
