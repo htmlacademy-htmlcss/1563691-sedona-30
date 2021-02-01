@@ -1,3 +1,21 @@
+/* Fonts */
+@font-face {
+    font-family: "PT Sans";
+    src: url("../fonts/PTSans.woff") format("woff"),
+    url("../fonts/PTSans.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src: url("../fonts/PTSans-Bold.woff") format("woff"),
+    url("../fonts/PTSans-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
 /* Variables */
 
 :root {
@@ -61,30 +79,30 @@ img {
 
 /* User navigation */
 
-.site-navigation a {
+.site-navigation-link {
     color: var(--basic-black);
 }
 
-.site-navigation a:hover,
-.site-navigation a:focus {
+.site-navigation-link:hover,
+.site-navigation-link:focus {
     color: var(--accent-light);
 }
 
-.site-navigation a:active {
+.site-navigation-link:active {
     color: var(--black-opacity);
-s}
+}
 
 
 /* Main display */
 
-.container h1 {
+.container-caption {
     font-size: 21px;
     font-weight: 700;
     line-height: 26px;
     text-align: center;
 }
 
-.container p {
+.container-text {
     line-height: 26px;
     color: var(--basic-light);
     text-align: center;
@@ -101,32 +119,30 @@ s}
     text-align: center;
 }
 
-.feature-item h3 {
+.feature-caption {
     font-size: 21px;
     font-weight: 700;
     line-height: 21px;
 }
 
-.feature-item p {
+.feature-text {
     color: var(--basic-light);
 }
 
-.features-list li:nth-child(1) p,
-.features-list li:nth-child(5) p,
-.features-list li:nth-child(1) h3,
-.features-list li:nth-child(5) h3 {
+.feature-caption-accent {
     color: var(--basic-white);
 }
 
-.features-list li:nth-child(1),
-.features-list li:nth-child(5) {
+.feature-item-background-accent {
     background-color: var(--accent-light);
 }
 
-.features-list li:nth-child(6),
-.features-list li:nth-child(7),
-.features-list li:nth-child(8) {
+.feature-item-background-light {
     background-color: var(--index-grey);
+}
+
+.feature-text-accent {
+    color: var(--basic-white);
 }
 
 
@@ -136,13 +152,13 @@ s}
     text-align: center;
 }
 
-.bold {
+.search-caption {
     font-size: 30px;
     line-height: 24px;
     font-weight: 700;
 }
 
-.search p {
+.search-text {
     color: var(--basic-light);
 }
 
@@ -174,7 +190,7 @@ s}
     background-color: var(--basic-white);
 }
 
-.main-footer-contacts p {
+.contacts-text {
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
@@ -184,11 +200,11 @@ s}
     text-align: center;
 }
 
-.main-footer-social ul {
+.social-list {
     list-style: none;
 }
 
-.main-footer p {
+.main-footer-text {
     line-height: 26px;
 }
 
