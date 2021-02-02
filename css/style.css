@@ -1,0 +1,222 @@
+/* Fonts */
+@font-face {
+    font-family: "PT Sans";
+    src: url("../fonts/PTSans.woff") format("woff"),
+    url("../fonts/PTSans.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src: url("../fonts/PTSans-Bold.woff") format("woff"),
+    url("../fonts/PTSans-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* Variables */
+
+:root {
+    --basic-black: #000000; 
+    --basic-light: #333333; /*цвет текста*/
+    --accent-light: #81B3D2; /*цвет кнопок,иконок*/
+    --accent-dark: #766357; /*кнопки, активная страница*/
+    --index-grey: #EEEEEE; /*фон блока на главной странице*/
+    --neutral-grey: #F2F2F2; /*формы, фон рейтинга в каталоге*/
+    --form-gray: #A9A9A9; /*иконки и кнопки +/- в форме*/
+    --arrow-grey: #CACACA; /*стрелки в каталоге*/
+    --rating-gray: #666666; /*текст рейтинг*/
+    --filter-blocked: #6A6A6A; /*заблокированный фильтр*/
+    --slider-grey: #ABABAB; /*точка в ползунке в фильтре*/
+    --hover-dark: #604E43; /*темная кнопка наведение*/
+    --click-dark: #503E33; /*темная кнопка нажатие*/
+    --hover-light: #669EC0; /*светлая кнопка наведение*/
+    --click-light: #5496BD; /*светлая кнопка нажатие*/
+    --hover-field: #EBEBEB; /*поле ввода наведение*/
+    --field-selected: #E5E5E5; /*поле вода выбрано*/
+    --click-logo: #BDBBBC; /*лого академии нажатие*/
+    --basic-white: #FFFFFF;
+    --black-opacity: rgba(0, 0, 0, 0.3);
+}
+
+
+/* Global */
+
+body {
+    min-width: 960px;
+    margin: 0;
+    padding: 0;
+    font-family: PT Sans, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+  }
+  
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Main navigation */
+
+.main-navigation {
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.site-navigation {
+    list-style: none;
+}
+
+
+/* User navigation */
+
+.site-navigation-link {
+    color: var(--basic-black);
+}
+
+.site-navigation-link:hover,
+.site-navigation-link:focus {
+    color: var(--accent-light);
+}
+
+.site-navigation-link:active {
+    color: var(--black-opacity);
+}
+
+
+/* Main display */
+
+.container-caption {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+}
+
+.container-text {
+    line-height: 26px;
+    color: var(--basic-light);
+    text-align: center;
+}
+
+
+/* Features */
+
+.features-list {
+    list-style: none;
+}
+
+.feature-item {
+    text-align: center;
+}
+
+.feature-caption {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 21px;
+}
+
+.feature-text {
+    color: var(--basic-light);
+}
+
+.feature-caption-accent {
+    color: var(--basic-white);
+}
+
+.feature-item-background-accent {
+    background-color: var(--accent-light);
+}
+
+.feature-item-background-light {
+    background-color: var(--index-grey);
+}
+
+.feature-text-accent {
+    color: var(--basic-white);
+}
+
+
+/* Search */
+
+.search {
+    text-align: center;
+}
+
+.search-caption {
+    font-size: 30px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.search-text {
+    color: var(--basic-light);
+}
+
+.button {
+    font-size: 26px;
+    line-height: 26px;
+    text-align: center;
+    color: var(--basic-white);
+    vertical-align: middle;
+    text-transform: uppercase;
+    background-color: var(--accent-dark);
+    border: none;
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--hover-dark);
+}
+
+.button:active {
+    background-color: var(--click-dark);
+}
+
+
+/* Main footer */
+
+.main-footer {
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+}
+
+.contacts-text {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.main-footer-social {
+    text-align: center;
+}
+
+.social-list {
+    list-style: none;
+}
+
+.main-footer-text {
+    line-height: 26px;
+}
+
+.social-button {
+    background-color: var(--accent-light);
+  }
+
+.social-button:hover,
+.social-button:focus {
+    background-color: var(--hover-light);
+}
+
+.social-button:active {
+    background-attachment: var(--click-light);
+}
