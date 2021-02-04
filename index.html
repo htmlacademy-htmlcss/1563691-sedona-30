@@ -17,26 +17,38 @@
         <a class="main-header-logo">
           <img src="img/logo.svg" width="138" height="70" alt="Логотип Седона">
         </a>
-        <ul class="site-navigation">
-          <li><a class="site-navigation-link" href="blank.html">Информация</a></li>
-          <li><a class="site-navigation-link" href="blank.html">Фото и видео</a></li>
-          <li><a class="site-navigation-link" href="blank.html">Карта штата</a></li>
-          <li><a class="site-navigation-link" href="catalog.html">Гостиницы</a></li>
-        </ul>
+        <div class="main-header-bar">
+          <div class="main-navigation-wrapper">
+            <ul class="site-navigation">
+              <li><a class="site-navigation-link" href="blank.html">Информация</a></li>
+              <li><a class="site-navigation-link" href="blank.html">Фото и видео</a></li>
+              <li><a class="site-navigation-link" href="blank.html">Карта штата</a></li>
+              <li><a class="site-navigation-link" href="catalog.html">Гостиницы</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
     <main class="container">
-      <img class="main-picture" src="img/welcome.svg" width="457" height="350" alt="Добро пожаловать в великолепную Седону">
-      <h1 class="container-caption">Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</h1>
-      <p class="container-text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+      <section class="main-display">
+        <div class="main-picture">
+          <img src="img/welcome.svg" width="457" height="350" alt="Добро пожаловать в великолепную Седону">
+        </div>
+        <div class="main-text">
+          <h1 class="container-caption">Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</h1>
+          <p class="container-text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+      </div>
+    </section>
       <section class="features">
         <h2>Преимущества</h2>
         <ul class="features-list">
-          <li class="feature-item feature-item-background-accent">
+          <li class="feature-item feature-item-background-accent feature-city">
             <h3 class="feature-caption feature-caption-accent">Настоящий городок</h3>
             <p class="feature-text-accent">&mdash; №1 &mdash;</p>
             <p class="feature-text-accent">Седона &mdash; не аттракцион для туристов, там течёт своя жизнь</p>
+          </li>
+          <li class="feature-item img-city">
             <img src="img/sedona-city.jpg" width="800" height="256" alt="Фото городка Седона">
           </li>
           <li class="feature-item">
@@ -51,11 +63,13 @@
             <h3 class="feature-caption">Сувениры</h3>
             <p class="feature-text">Не только китайского, но и местного производства!</p>
           </li>
+          <li class="feature-item img-bridg">
+            <img src="img/bridge.jpg" width="800" height="256" alt="Мост Дьявола в Седоне">
+          </li>
           <li class="feature-item feature-item-background-accent">
             <h3 class="feature-caption feature-caption-accent">Там есть Мост дьявола</h3>
             <p class="feature-text-accent">&mdash; №2 &mdash;</p>
             <p class="feature-text-accent">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-            <img src="img/bridge.jpg" width="800" height="256" alt="Мост Дьявола в Седоне">
           </li>
           <li class="feature-item feature-item-background-light">
             <h3 class="feature-caption">Небольшая площадь</h3>
@@ -86,29 +100,33 @@
     </main>
 
     <footer class="main-footer">
-      <section class="main-footer-contacts">
-        <h2>Контакты</h2>
-        <p class="contacts-text">&num;visitSEDONA</p>
-        <p class="contacts-text">ТЕЛ: <a class="main-footer-phone" href="tel:+74956660166"></a>+7(495) 666-01-66 </p>
+      <div class="container">
+        <section class="main-footer-contacts">
+          <h2>Контакты</h2>
+          <p class="contacts-text">&num;visitSEDONA</p>
+          <p class="contacts-text">ТЕЛ: <a class="main-footer-phone" href="tel:+74956660166"></a>+7(495) 666-01-66 </p>
+        </section>
+        <section class="main-footer-social">
+          <h2>Социальные сети</h2>
+          <ul class="social-list">
+            <li>
+              <a class="social-button" href="#">Твиттер</a>
+            </li>
+            <li>
+              <a class="social-button" href="#">Фейсбук</a>
+            </li>
+            <li>
+              <a class="social-button" href="#">Ютуб</a>
+            </li>
+          </ul>
+        </section>
+        <section class="footer-copyright">
+          <p class="main-footer-text">Website by</p>
+          <a class="copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss">
+            <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML Academy">
+          </a>
       </section>
-      <section class="main-footer-social">
-        <h2>Социальные сети</h2>
-        <ul class="social-list">
-          <li>
-            <a class="social-button" href="#">Твиттер</a>
-          </li>
-          <li>
-            <a class="social-button" href="#">Фейсбук</a>
-          </li>
-          <li>
-            <a class="social-button" href="#">Ютуб</a>
-          </li>
-        </ul>
-      </section>
-      <p class="main-footer-text">Website by</p>
-      <a class="copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML Academy">
-      </a>
+    </div>
     </footer>
   </body>
 </html>
