@@ -26,7 +26,7 @@
       </nav>
     </header>
 
-    <main class="container">
+    <main class="page container">
       <h1>Подбор гостиниц в седоне</h1>
 
       <section class="filters">
@@ -66,12 +66,13 @@
                 </li>
               </ul>
             </fieldset>
-
-            <p>Стоимость в сутки (р):</p>
-            <p>От 0</p>
-            <p>До 3000</p>
-            <input type="range" name="cost" id="filte-id" min="0" max="3000">
-            <button class="button-form" type="submit">Показать</button>
+            <section class="price">
+              <p>Стоимость в сутки (р):</p>
+              <p>От 0</p>
+              <p>До 3000</p>
+              <input type="range" name="cost" id="filte-id" min="0" max="3000">
+              <button class="button-form" type="submit">Показать</button>
+            </section>
           </form>
       </section>
 
@@ -133,29 +134,33 @@
     </main>
 
     <footer class="main-footer">
-      <section class="main-footer-contacts">
-        <h2>Контакты</h2>
-        <p class="contacts-text">&num;visitSEDONA</p>
-        <p class="contacts-text">ТЕЛ: <a class="main-footer-phone" href="tel:+74956660166"></a>+7(495) 666-01-66 </p>
+      <div class="container">
+        <section class="main-footer-contacts">
+          <h2>Контакты</h2>
+          <p class="contacts-text">&num;visitSEDONA</p>
+          <p class="contacts-text">ТЕЛ: <a class="main-footer-phone" href="tel:+74956660166"></a>+7(495) 666-01-66 </p>
+        </section>
+        <section class="main-footer-social">
+          <h2>Социальные сети</h2>
+          <ul class="social-list">
+            <li>
+              <a class="social-button" href="#">Твиттер</a>
+            </li>
+            <li>
+              <a class="social-button" href="#">Фейсбук</a>
+            </li>
+            <li>
+              <a class="social-button" href="#">Ютуб</a>
+            </li>
+          </ul>
+        </section>
+        <section class="footer-copyright">
+          <p class="main-footer-text">Website by</p>
+          <a class="copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss">
+            <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML Academy">
+          </a>
       </section>
-      <section class="main-footer-social">
-        <h2>Социальные сети</h2>
-        <ul class="social-list">
-          <li>
-            <a class="social-button" href="#">Твиттер</a>
-          </li>
-          <li>
-            <a class="social-button" href="#">Фейсбук</a>
-          </li>
-          <li>
-            <a class="social-button" href="#">Ютуб</a>
-          </li>
-        </ul>
-      </section>
-      <p class="main-footer-text">Website by</p>
-      <a class="copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML Academy">
-      </a>
+    </div>
     </footer>
   </body>
 </html>
