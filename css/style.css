@@ -45,7 +45,7 @@
 /* Global */
 
 body {
-    min-width: 960px;
+    min-width: 1200px;
     margin: 0;
     padding: 0;
     font-family: PT Sans, Arial, sans-serif;
@@ -76,6 +76,7 @@ img {
 .main-header {
     outline: 5px solid rgba(0, 255, 0, 0.7);
     outline-offset: -5px;
+    height: 56px;
   }
 
 /* Main navigation */
@@ -84,9 +85,6 @@ img {
     line-height: 26px;
     font-weight: 700;
     display: grid;
-    width: 1200px;
-    margin: 0 auto;
-    padding: 0 10px;width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
 }
@@ -102,23 +100,23 @@ img {
     margin: 0;
     padding: 0;
     display: flex;
+    width: 1200px;
 }
 
-.site-navigation-link {
-    padding-left: 72px;
+.site-navigation-item {
+    width: 228px;
+    margin-left: 72px;
     text-align: left;
+    z-index: 1;
+    margin-top: 15px;
 }
 
-.site-link-map {
-    margin-left: auto;
-}
-
-.site-navigation-link:nth-child(4n),
-.site-navigation-link:nth-child(4-1) {
-    padding-left: 0;
-    padding-right: 72px;
+.site-navigation li:nth-child(4n),
+.site-navigation li:nth-child(3n) {
+    margin-left: 0;
+    margin-right: 72px;
     text-align: right;
-}*
+}
 
 /* Container */
 
@@ -130,9 +128,11 @@ img {
 /* Logo */
 
 .main-header-logo {
-    outline: 5px solid rgba(255, 0, 0, 0.3);
-    outline-offset: -5px;
-    justify-self: center;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    text-align: center;
 }
 
 
@@ -143,25 +143,23 @@ img {
     outline-offset: -5px;
     display: grid;
     grid-template-columns: 128px 400px 527px;
+    margin-left: 72px;
 }
 
-.search-results {
-    grid-template-rows: 1fr 1fr 1fr;
+.sorting-filters {
+    display: flex;
+    align-items: center;
+    margin-left: 72px;
 }
 
 .search-results-item {
     outline: 5px solid rgba(255, 0, 0, 0.7);
     outline-offset: -5px;
-}
-
-.sorting {
-    outline: 5px solid rgba(0, 255, 0, 0.7);
-    outline-offset: -5px;
-}
-
-.search-results {
-    outline: 5px solid rgba(0, 0, 255, 0.7);
-    outline-offset: -5px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 72px;
 }
 
 /* Grid */
@@ -192,11 +190,10 @@ img {
 
 /* Main display */
 
-
 .main-picture {
     background-image: url(../img/background-photo.jpg);
+    background-color: var(--accent-light);
     background-repeat: no-repeat;
-    background-position: 50% 50%;
     text-align: center;
     margin-bottom: 42.5px;
     padding-top: 63px;
@@ -232,7 +229,6 @@ img {
 .features-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    
     list-style: none;
     margin: 0;
     padding: 0;
@@ -361,10 +357,17 @@ img {
     color: var(--basic-black);
     font-size: 12px;
     line-height: 18px;
+    margin-left: 46px;
 }
 
 .sorting-list {
     list-style: none;
+    margin-left: 40px;
+    display: flex;
+}
+
+.sorting-item {
+    margin-right: 32px;
 }
 
 .sorting-link {
@@ -386,11 +389,6 @@ img {
     margin: 0;
 }
 
-.search-results-item {
-    padding-bottom: 30px;
-    padding-top: 30px;
-}
-
 .sorting-link:hover {
     color: var(--accent-light);
 }
@@ -403,6 +401,8 @@ img {
     font-size: 21px;
     font-weight: bold;
     line-height: 26px;
+    margin: 0;
+    padding: 0;
 }
 
 .button-detail {
@@ -449,9 +449,6 @@ img {
     outline: 5px solid rgba(255, 0, 0, 0.7);
     outline-offset: -5px;
     padding: 23px 0;
-}
-
-.main-footer .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -459,11 +456,16 @@ img {
 .main-footer-contacts {
     outline: 5px solid rgba(0, 255, 0, 0.7);
     text-align: center;
+    margin-left: 72px;
 }
 
 .footer-copyright {
     outline: 5px solid rgba(255, 0, 255, 0.7);
     text-align: center;
+    margin-right: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contacts-text {
@@ -481,10 +483,13 @@ img {
     list-style: none;
     display: flex;
     justify-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-footer-text {
     line-height: 26px;
+    padding-right: 8px;
 }
 
 .social-button {
