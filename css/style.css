@@ -39,6 +39,7 @@
     --click-logo: #BDBBBC; /*лого академии нажатие*/
     --basic-white: #FFFFFF;
     --black-opacity: rgba(0, 0, 0, 0.3);
+    --white-opacity: rgba(255, 255, 255, 0.3);
 }
 
 
@@ -54,6 +55,7 @@ body {
     font-weight: 400;
     text-transform: uppercase;
     color: var(--basic-light);
+    background-color: var(--neutral-grey);
 
     min-height: 100%;
     display: grid;
@@ -68,6 +70,19 @@ a {
 img {
     max-width: 100%;
     height: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 
@@ -85,12 +100,7 @@ img {
     line-height: 26px;
     font-weight: 700;
     display: grid;
-    margin: 0 auto;
     position: relative;
-}
-
-.main-header {
-    background-color: var(--basic-white);
 }
 
 .site-navigation {
@@ -122,6 +132,8 @@ img {
 .container {
     width: 1200px;
     margin: 0 auto;
+    background-color: var(--basic-white);
+    box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 /* Logo */
@@ -132,6 +144,7 @@ img {
     width: 138px;
     height: 70px;
     margin-left: -69px;
+    z-index: 1;
 }
 
 
@@ -144,6 +157,7 @@ img {
     grid-template-columns: 128px 400px 527px;
     margin-left: 72px;
     margin-right: 72px;
+    padding-top: 30px;
 }
 
 .sorting-filters {
@@ -153,15 +167,21 @@ img {
 }
 
 .search-results-item {
+    border-top: 1px var(--field-selected) solid;
+    border-bottom: 1px var(--field-selected) solid;
+}
+
+.search-results-article {
     outline: 5px solid rgba(255, 0, 0, 0.7);
     outline-offset: -5px;
     display: grid;
     grid-template-columns: 135px 1fr 127px;
-    padding-top: 30px;
     padding-bottom: 30px;
     margin-left: 72px;
     margin-right: 72px;
+    position: relative;
 }
+
 
 /* Grid */
 
@@ -196,8 +216,15 @@ img {
     background-color: var(--accent-light);
     background-repeat: no-repeat;
     text-align: center;
-    margin-bottom: 42.5px;
     padding-top: 63px;
+    padding-bottom: 80px;
+    position: relative;
+}
+
+.shape {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 .main-text {
@@ -216,6 +243,7 @@ img {
 .container-text {
     line-height: 26px;
     text-align: center;
+    margin-top: 30px;
 }
 
 
@@ -252,11 +280,11 @@ img {
 }
 
 .feature-text {
-    margin: 0 10px;
+    margin: 0 50px;
 }
 
 .feature-item:not(.feature-item-background-accent) {
-    padding-bottom: 50px;
+    padding-bottom: 54px;
 }
 
 .feature-caption {
@@ -265,6 +293,60 @@ img {
     line-height: 21px;
     color: var(--basic-black);
     padding-top: 47px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.text-decoration {
+    margin-bottom: 23px;
+}
+
+.feature-item-icon h3 {
+    padding-top: 160px;
+}
+
+.feature-item-icon p {
+    margin-bottom: 28px;
+    margin-top: 25px;
+}
+
+.feature-caption-housing::before {
+    content: "";
+    background-image: url("../img/house.svg");
+    width: 75px;
+    height: 72px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+.feature-caption-food::before {
+    content: "";
+    background-image: url("../img/burger.svg");
+    width: 75px;
+    height: 70px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+.feature-caption-souvenir::before {
+    content: "";
+    background-image: url("../img/surprise.svg");
+    width: 64px;
+    height: 77px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%); 
 }
 
 .feature-item-background-accent {
@@ -303,6 +385,7 @@ img {
     text-transform: uppercase;
     background-color: var(--accent-dark);
     border: none;
+    padding: 30px 125px;
 }
 
 .button:hover,
@@ -312,6 +395,7 @@ img {
 
 .button:active {
     background-color: var(--click-dark);
+    color: var(--white-opacity);
 }
 
 
@@ -321,7 +405,7 @@ img {
     color: var(--basic-white);
     background-color: var(--filter-blocked);
     background-image: url(../img/background-catalog.jpg);
-    margin-bottom: 29px;
+    height: 217px;
 }
 
 .services-list,
@@ -347,11 +431,20 @@ img {
 
 /* Sorting */
 
+.sorting {
+    outline: 5px solid rgba(255, 0, 0, 0.7);
+    display: grid;
+    grid-template-columns: 1fr 127px;
+}
+
 .sorting-caption {
     color: var(--basic-black);
     font-size: 21px;
     font-weight: 700;
     line-height: 26px;
+    margin: 0;
+    margin-top: 29px;
+    margin-bottom: 31px;
 }
 
 .sorting-text {
@@ -363,7 +456,6 @@ img {
 
 .sorting-list {
     list-style: none;
-    margin-left: 40px;
     display: flex;
 }
 
@@ -375,10 +467,31 @@ img {
     font-size: 12px;
     line-height: 18px;
     color: var(--black-opacity);
+    border-bottom: var(--accent-light) dotted 1px;
 }
 
 .sorting-link-current {
     color: var(--accent-light);
+    border: none;
+}
+
+.arrow-up {
+    background-image: url(../img/arrow-up.svg);
+    width: 11px;
+    height: 10px;
+}
+
+.arrow-down {
+    background-image: url(../img/arrow-down.svg);
+    width: 11px;
+    height: 10px;
+}
+
+.arrows {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 72px;
+    padding-top: 40px;
 }
 
 
@@ -403,11 +516,31 @@ img {
     font-weight: bold;
     line-height: 26px;
     margin: 0;
-    padding: 0;
+    margin-top: 23.5px;
 }
 
 .hotel-information {
     margin-left: 29px;
+}
+
+.hotel-text {
+    display: flex;
+}
+
+.hotel-text p {
+    width: 109px;
+    margin: 0;
+    margin-right: 6px;
+    margin-top: 7px;
+}
+
+.search-results-image {
+    margin-top: 30px;
+}
+
+.hotel-buttons {
+    display: flex;
+    margin-top: 15.5px;
 }
 
 .button-detail {
@@ -418,6 +551,8 @@ img {
     font-weight: bold;
     border: none;
     vertical-align: middle;
+    padding: 3px 16px;
+    margin-right: 6px;
 
 }
 
@@ -427,6 +562,7 @@ img {
 
 .button-detail:active {
     background-color: var(--click-light);
+    color: var(--white-opacity);
 }
 
 .button-booking {
@@ -437,6 +573,7 @@ img {
     font-weight: bold;
     border: none;
     vertical-align: middle;
+    padding: 3px 16px;
 }
 
 .button-booking:hover {
@@ -445,6 +582,44 @@ img {
 
 .button-booking:active {
     background-color: var(--click-dark);
+    color: var(--white-opacity);
+}
+
+.rating {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    background-color: var(--neutral-grey);
+    padding: 3px 15px;
+    margin-bottom: 30px;
+}
+
+.rating-stars-four {
+    background-image: url(../img/stars-four.png);
+    width: 91px;
+    height: 17px;
+    position: absolute;
+    right: 0;
+    top: 29px;
+}
+
+.rating-stars-three {
+    background-image: url(../img/stars-three.png);
+    width: 66px;
+    height: 17px;
+    position: absolute;
+    right: 0;
+    top: 29px;
+}
+
+.rating-stars-two {
+    background-image: url(../img/stars-two.png);
+    width: 42px;
+    height: 17px;
+    position: absolute;
+    right: 0;
+    top: 29px;
 }
 
 /* Main footer */
@@ -454,18 +629,25 @@ img {
     outline: 5px solid rgba(255, 0, 0, 0.7);
     outline-offset: -5px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 327px 1fr 327px;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
 }
 
 .main-footer-contacts {
     outline: 5px solid rgba(0, 255, 0, 0.7);
     text-align: center;
+    margin: 0;
+    padding: 0;
     margin-left: 72px;
 }
 
 .footer-copyright {
     outline: 5px solid rgba(255, 0, 255, 0.7);
     text-align: center;
+    margin: 0;
+    padding: 0;
     margin-right: 72px;
     display: flex;
     justify-content: center;
@@ -481,14 +663,20 @@ img {
 .main-footer-social {
     text-align: center;
     outline: 5px solid rgba(0, 255, 255, 0.7);
+    margin: 0;
+    padding: 0;
 }
 
 .social-list {
     list-style: none;
     display: flex;
-    justify-content: center;
-    justify-content: center;
     align-items: center;
+    width: 150px;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+    padding-top: 30px;
 }
 
 .main-footer-text {
@@ -497,7 +685,12 @@ img {
 }
 
 .social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--accent-light);
+    width: 46px;
+    height: 48px;
   }
 
 .social-button:hover,
@@ -508,3 +701,14 @@ img {
 .social-button:active {
     background-color: var(--click-light);
 }
+
+.social-button:active path {
+    fill: var(--white-opacity);
+}
+
+.copyright-logo:hover path {
+    fill: var(--accent-light);
+}
+
+.copyright-logo:active path {
+    fill: var(--click-logo);
