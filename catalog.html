@@ -33,45 +33,61 @@
         <h2 class="visually-hidden">Фильтр гостиниц</h2>
           <form class="filters-form" method="get" action="https://echo.htmlacademy.ru/">
             <fieldset class="filter-services">
-              <legend>Инфраструктура</legend>
+              <legend class="filter-caption">Инфраструктура:</legend>
               <ul class="services-list">
-                <li class="service-item">
-                  <input class="filter-input-checkbox" type="checkbox" name="swimming-pool" id="filter-swimming-pool" checked>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="swimming-pool" id="filter-swimming-pool" checked>
                   <label for="filter-swimming-pool">Бассейн</label>
                 </li>
-                <li class="service-item">
-                  <input class="filter-input-checkbox" type="checkbox" name="parking" id="filter-parcing">
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="parking" id="filter-parcing">
                   <label for="filter-parcing">Парковка</label>
                 </li>
-                <li class="service-item">
-                  <input class="filter-input-checkbox" type="checkbox" name="wi-fi" id="filter-wi-fi">
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="wi-fi" id="filter-wi-fi">
                   <label for="filter-wi-fi">Wi-fi</label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="filter-housing">
-              <legend>Тип жилья</legend>
+              <legend class="filter-caption">Тип жилья:</legend>
               <ul class="housing-list">
-                <li class="housing-item">
-                  <input class="filter-input-checkbox" type="checkbox" name="hostel" id="filter-hostel" checked>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="hostel" id="filter-hostel" checked>
                   <label for="filter-hostel">Гостиница</label>
                 </li>
-                <li class="housing-item">
-                  <input class="filter-input-checkbox" type="checkbox" name="motel" id="filter-motel" checked>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="motel" id="filter-motel" checked>
                   <label for="filter-motel">Мотель</label>
                 </li>
-                <li class="housing-item">
-                  <input class="filter-input-checkbox" type="checkbox" name="apartment" id="filter-apartment" checked>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="apartment" id="filter-apartment" checked>
                   <label for="filter-apartment">Мотель</label>
                 </li>
               </ul>
             </fieldset>
             <section class="price">
-              <p>Стоимость в сутки (р):</p>
-              <p>От 0</p>
-              <p>До 3000</p>
-              <input type="range" name="cost" id="filte-id" min="0" max="3000">
-              <button class="button-form" type="submit">Показать</button>
+              <form method="get" action="https://echo.htmlacademy.ru">
+                <fieldset class="filter-item">
+                  <legend class="filter-item-caption">Стоимость в сутки (р):</legend>
+                  <div class="range-filter">
+                    <div class="price-controls">
+                      <label class="min-price">
+                        от <input class="price-input" type="number" name="min-price" value="0">
+                      </label>
+                      <label class="max-price">
+                        до <input class="price-input" type="number" name="max-price" value="3000">
+                      </label>
+                    </div>
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                    <div class="toggle toggle-min" tabindex="0"></div>
+                    <div class="toggle toggle-max" tabindex="0"></div>
+                  </div>
+                  <button class="button-form" type="submit">Показать</button>
+                </fieldset>
+              </form>
             </section>
           </form>
       </section>
