@@ -62,21 +62,21 @@
                 </li>
                 <li class="filter-option">
                   <input class="visually-hidden filter-input-checkbox" type="checkbox" name="apartment" id="filter-apartment" checked>
-                  <label for="filter-apartment">Мотель</label>
+                  <label for="filter-apartment">Апартаменты</label>
                 </li>
               </ul>
             </fieldset>
-            <section class="price">
+            <div class="price">
               <form method="get" action="https://echo.htmlacademy.ru">
                 <fieldset class="filter-item">
                   <legend class="filter-item-caption">Стоимость в сутки (р):</legend>
                   <div class="range-filter">
                     <div class="price-controls">
                       <label class="min-price">
-                        от <input class="price-input" type="number" name="min-price" value="0">
+                        от <input class="price-input price-input-min" type="number" name="min-price" value="0">
                       </label>
                       <label class="max-price">
-                        до <input class="price-input" type="number" name="max-price" value="3000">
+                        до <input class="price-input price-input-max" type="number" name="max-price" value="3000">
                       </label>
                     </div>
                     <div class="scale">
@@ -85,34 +85,38 @@
                     <div class="toggle toggle-min" tabindex="0"></div>
                     <div class="toggle toggle-max" tabindex="0"></div>
                   </div>
-                  <button class="button-form" type="submit">Показать</button>
                 </fieldset>
+                <button class="button-form" type="submit">Показать</button>
               </form>
-            </section>
+            </div>
           </form>
       </section>
 
       <section class="sorting">
         <h2 class="visually-hidden">Сортировка по результатам поиска</h2>
         <section class="sorting-filters">
-          <p class="sorting-caption">Найдено:3</p>
+          <p class="sorting-caption">Найдено: 3</p>
           <p class="sorting-text">Сортировка:</p>
           <ul class="sorting-list">
             <li class="sorting-item">
-              <a class="sorting-link sorting-link-current" href="#">По цене</a>
+              <a class="sorting-link sorting-link-current">По цене</a>
             </li>
             <li class="sorting-item">
               <a class="sorting-link" href="#">По типу</a>
             </li>
             <li class="sorting-item">
               <a class="sorting-link" href="#">По рейтингу</a>
-            </li>
+            </li> 
           </ul>
+          <div class="arrows-box">
+            <svg class="arrow" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
+            </svg>
+            <svg class="arrow" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 10L0 0H11" fill="#81B3D2"/>
+            </svg>
+          </div>
         </section>
-        <div class="arrows">
-          <div class="arrow-up"></div>
-          <div class="arrow-down"></div>
-        </div>
       </section>
 
       <section class="search-results">
@@ -122,7 +126,7 @@
             <article class="search-results-article">
               <img class="search-results-image" src="img/amara.jpg" width="139" height="90" alt="Фото гостиницы Amara Resort & Spa">
               <div class="hotel-information">
-                <p class="hotel-caption">Amara Resort &#38; Spa</p>
+                <h3 class="hotel-caption">Amara Resort &#38; Spa</h3>
                 <div class="hotel-text">
                   <p>Гостиница</p>
                   <p>от 4000р</p>
@@ -132,15 +136,17 @@
                   <button class="button-booking" type="submit">Забронировать</button>
                 </div>
               </div>
-              <div class="rating-stars-four"></div>
-              <p class="rating">Рейтинг 8,5</p>
+              <div class="rating-box">
+                <img src="img/stars-four.svg" width="91" height="17" alt="Четырехзвездочная гостиница">
+                <p class="rating">Рейтинг 8,5</p>
+              </div>
             </article>
           </li>
           <li class="search-results-item">
             <article class="search-results-article">
               <img class="search-results-image" src="img/desert.jpg" width="139" height="90" alt="Фото мотеля Desert Quail Inn">
               <div class="hotel-information">
-                <p class="hotel-caption">Desert Quail Inn</p>
+                <h3 class="hotel-caption">Desert Quail Inn</h3>
                 <div class="hotel-text">
                   <p>Мотель</p>
                   <p>от 3000р</p>
@@ -150,15 +156,17 @@
                   <button class="button-booking" type="submit">Забронировать</button>
                 </div>
               </div>
-              <div class="rating-stars-three"></div>
-              <p class="rating">Рейтинг 8,9</p>
+              <div class="rating-box">
+                <img src="img/stars-three.svg" width="66" height="17" alt="Трехзвездочный мотель">
+                <p class="rating">Рейтинг 8,9</p>
+              </div>
             </article>
           </li>
           <li class="search-results-item">
             <article class="search-results-article">
               <img class="search-results-image" src="img/villas.jpg" width="139" height="90" alt="Фото апартаментов Villas at Poco Diablo">
               <div class="hotel-information">
-                <p class="hotel-caption">Villas at Poco Diablo</p>
+                <h3 class="hotel-caption">Villas at Poco Diablo</h3>
                 <div class="hotel-text">
                   <p>Апартаменты</p>
                   <p>от 2000р</p>
@@ -168,8 +176,10 @@
                   <button class="button-booking" type="submit">Забронировать</button>
                 </div>
               </div>
-              <div class="rating-stars-two"></div>
-              <p class="rating">Рейтинг 9,2</p>
+              <div class="rating-box">
+                <img src="img/stars-two.svg" width="42" height="17" alt="Двухзвездочные аппартаменты">
+                <p class="rating">Рейтинг 9,2</p>
+              </div>
             </article>
           </li>
         </ul>
@@ -180,7 +190,7 @@
       <section class="main-footer-contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <p class="contacts-text">&num;visitSEDONA</p>
-        <p class="contacts-text">ТЕЛ: <a class="main-footer-phone" href="tel:+74956660166"></a>+7(495) 666-01-66 </p>
+        <p class="contacts-text contacts-text-phone">ТЕЛ: <a class="main-footer-phone" href="tel:+74956660166"></a>+7(495) 666-01-66 </p>
       </section>
       <section class="main-footer-social">
         <h2 class="visually-hidden">Социальные сети</h2>
